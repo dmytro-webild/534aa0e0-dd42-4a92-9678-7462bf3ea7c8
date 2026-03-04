@@ -29,6 +29,7 @@ export default function LandingPage() {
       <div id="nav" data-section="nav">
         <NavbarStyleApple
           brandName="puul ai"
+          logoSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3AQIfAPgnVe6STU0xWKR6lfBPoV/puul-ai-logo.png"
           navItems={[
             { name: "Features", id: "features" },
             { name: "How It Works", id: "how-it-works" },
