@@ -16,7 +16,7 @@ export default function LandingPage() {
   return (
     <ThemeProvider
       defaultButtonVariant="directional-hover"
-      defaultTextAnimation="entrance-slide"
+      defaultTextAnimation="reveal-blur"
       borderRadius="rounded"
       contentWidth="mediumSmall"
       sizing="mediumSizeLargeTitles"
@@ -52,7 +52,7 @@ export default function LandingPage() {
           imageAlt="Puul AI Dashboard Interface"
           frameStyle="browser"
           mediaAnimation="slide-up"
-          buttonAnimation="entrance-slide"
+          buttonAnimation="slide-up"
         />
       </div>
 
