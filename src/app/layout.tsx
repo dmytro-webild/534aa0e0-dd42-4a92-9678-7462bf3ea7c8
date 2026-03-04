@@ -1,60 +1,20 @@
 import type { Metadata } from "next";
-import { Inter_Tight } from "next/font/google";
-import { Halant } from "next/font/google";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ServiceWrapper } from "@/components/ServiceWrapper";
-import Tag from "@/tag/Tag";
 
-const interTight = Inter_Tight({
-  variable: "--font-inter-tight",  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
-
-const halant = Halant({
-  variable: "--font-halant",  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Puul AI - AI Widget for Dental Practices",  description: "Automate patient lead engagement with Puul AI's intelligent widget. 24/7 instant responses on your website and social media. Boost appointment bookings.",  keywords: "AI chatbot dental, lead generation dental, appointment booking automation, dental widget, practice management AI",  metadataBase: new URL("https://puulai.com"),
-  alternates: {
-    canonical: "https://puulai.com"
-  },
-  openGraph: {
-    title: "Puul AI - Transform Your Dental Practice with AI",    description: "Convert more leads with Puul AI's intelligent widget. 24/7 patient engagement, instant responses, smart lead routing.",    url: "https://puulai.com",    siteName: "Puul AI",    type: "website",    images: [
-      {
-        url: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3AQIfAPgnVe6STU0xWKR6lfBPoV/a-clean-minimalist-ai-dashboard-interfac-1772607959906-5af1096e.png",        alt: "Puul AI Dashboard"
-      }
-    ]
-  },
-  twitter: {
-    card: "summary_large_image",    title: "Puul AI - AI for Dental Practices",    description: "24/7 automated patient engagement. Boost leads. Close more appointments.",    images: ["https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3AQIfAPgnVe6STU0xWKR6lfBPoV/a-clean-minimalist-ai-dashboard-interfac-1772607959906-5af1096e.png"]
-  },
-  robots: {
-    index: true,
-    follow: true
-  }
-};
+  title: "Puul AI - Dental Practice Lead Engagement",  description: "Empower your dental practice with AI-powered lead engagement. Automatically answer patient questions through a smart widget."};
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <ServiceWrapper>
-        <body
-          className={`${interTight.variable} ${halant.variable} ${inter.variable} antialiased`}
-        >
-          <Tag />
-          {children}
-        
+    <html lang="en">
+      <body className={inter.className}>{children}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -1422,7 +1382,6 @@ export default function RootLayout({
           }}
         />
       </body>
-      </ServiceWrapper>
     </html>
   );
 }
