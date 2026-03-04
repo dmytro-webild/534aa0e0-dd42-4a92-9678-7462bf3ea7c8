@@ -29,6 +29,7 @@ export default function LandingPage() {
       <div id="nav" data-section="nav">
         <NavbarStyleApple
           brandName="puul ai"
+          logoSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3AQIfAPgnVe6STU0xWKR6lfBPoV/a-clean-minimalist-ai-dashboard-interfac-1772607959906-5af1096e.png"
           navItems={[
             { name: "Features", id: "features" },
             { name: "How It Works", id: "how-it-works" },
@@ -208,6 +209,7 @@ export default function LandingPage() {
       <div id="footer" data-section="footer">
         <FooterCard
           logoText="puul ai"
+          logoSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3AQIfAPgnVe6STU0xWKR6lfBPoV/a-clean-minimalist-ai-dashboard-interfac-1772607959906-5af1096e.png"
           copyrightText="© 2025 | Puul AI. All rights reserved."
           socialLinks={[
             { icon: Twitter, href: "https://twitter.com/puulai", ariaLabel: "Twitter" },
