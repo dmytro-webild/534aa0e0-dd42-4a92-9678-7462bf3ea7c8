@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "./styles/variables.css";
+import "./styles/base.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Puul AI - Dental Practice Lead Engagement",  description: "Empower your dental practice with AI-powered lead engagement. Automatically answer patient questions through a smart widget."};
+  title: "Puul AI - Dental Practice Lead Engagement",  description: "AI-powered lead engagement for dental practices. Automate patient questions, convert more leads, and boost appointment bookings."};
 
 export default function RootLayout({
   children,
